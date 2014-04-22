@@ -1,0 +1,31 @@
+<!doctype html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>AES 256 Encrypt/Decrypt - Offline</title>
+    <script src="data/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="data/gibberish-aes-1.0.0.min.js"></script>
+    <link rel="stylesheet" href="data/style.css">
+    <script src="data/main.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>AES 256 Encrypt/Decrypt - Offline</h1>
+        <div style="font-size:9pt">
+            <p>* This site uses only <strong>Javascript</strong> to process data.</p>
+            <p>* There are no requests or data logs</p>
+            <p>* You can get source <a href="aes256-src.zip">here</a></p>
+        </div>
+        <table style="width:100%">
+            <tbody>
+                <tr><td>Password (more than 10 characters to be safer)<br><input id="pass" type="text"></td></tr>
+                <tr><td><strong>Input</strong><br><textarea id="data"></textarea></td></tr>
+                <tr><td style="float:right"><input type="button" value="Encrypt"> <input type="button" value="Decrypt"></td></tr>
+                <tr><td><strong>Output</strong><br><textarea id="out" readonly="readonly"></textarea></td></tr>
+            </tbody>
+        </table><br>
+        <p><strong>You can decrypt with openssl like this in command promt:</strong></p>
+        <p class="simple">echo "U2FsdGVkX1+21O5RB08bavFTq7Yq/gChmXrO3f00tvJaT55A5pPvqw0zFVnHSW1o" | openssl enc -d -aes-256-cbc -a -k password</p>
+    </div>
+</body>
+</html>
